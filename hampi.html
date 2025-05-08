@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hampi Explorer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #F4EAE0;
+      color: #4E3D53;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+
+    section {
+      width: 100%;
+      padding: 80px 5%;
+    }
+    /* Section 1 - Hampi Landing */
+    .hampi-section {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+      }
+  
+      .hampi-image {
+        flex: 1;
+        background: url('https://i.pinimg.com/736x/9e/b9/2d/9eb92dade95b3da029060ad184452af1.jpg') center center/cover no-repeat;
+      }
+  
+      .hampi-text {
+        flex: 1;
+        background-color: #fdf1ea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px;
+        flex-direction: column;
+        text-align: left;
+      }
+  
+      .hampi-text h1 {
+        font-family: 'DM Serif Display', serif;
+        font-size: 100px;
+        color: #b55228;
+        margin-bottom: 20px;
+      }
+  
+      .hampi-text p {
+        font-size: 12px;
+        color: #b55228;
+        font-weight: 500;
+        max-width: 300px;
+        line-height: 1.6;
+      }
+
+    /* Section 1: History */
+    .history {
+      background-color: #F4EAE0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .history .text {
+      flex: 1 1 55%;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-right: 40px;
+    }
+
+    .history h1 {
+      font-size: 100px;
+      color: #6B4C74;
+      margin-bottom: 20px;
+    }
+
+    .history .image {
+      flex: 1 1 40%;
+    }
+
+    .history img {
+      width: 100%;
+      border-radius: 100px 100px 0 0;
+    }
+
+    /* Section 2: Scrollable Highlight Cards */
+    .highlights {
+      background-color: #C55A1D;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .highlight-card {
+      width: calc(33% - 20px);
+      background-color: #C55A1D;
+      text-align: center;
+    }
+
+    .highlight-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .highlight-card p {
+      color: #fff;
+      font-size: 22px;
+      letter-spacing: 3px;
+      margin-top: 12px;
+    }
+
+
+     
+    /* Section 3: Itinerary */
+    .itinerary {
+      background-color: #9B6846;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      color: white;
+    }
+
+    .itinerary img {
+      width: 40%;
+      border-radius: 10px;
+      margin-right: 5%;
+    }
+
+    .itinerary-content {
+      flex: 1;
+    }
+
+    .itinerary h1 {
+      font-size: 70px;
+      margin-bottom: 30px;
+    }
+
+    .itinerary-content p {
+      margin-bottom: 20px;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 1024px) {
+      .highlight-card, .place-item {
+        width: calc(50% - 20px);
+      }
+
+      .itinerary {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .itinerary img {
+        width: 80%;
+        margin: 0 auto 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .highlight-card, .place-item {
+        width: 100%;
+      }
+
+      .history {
+        flex-direction: column;
+      }
+
+      .history .text, .history .image {
+        flex: 1 1 100%;
+        padding: 0;
+      }
+
+      .history h1 {
+        font-size: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+     <!-- Section 1: Landing -->
+  <section class="hampi-section">
+    <div class="hampi-image"></div>
+    <div class="hampi-text">
+      <h1>Hampi</h1>
+      <p>IN HAMPI, EVEN THE SILENCE ECHOES WITH THE FOOTSTEPS OF FORGOTTEN KINGS AND THE WHISPERS OF CARVED STONE</p>
+    </div>
+  </section>
+
+  <!-- Section 1: History -->
+  <section class="history">
+    <div class="text">
+      <h1>History</h1>
+      <p>
+        Hampi, a UNESCO World Heritage Site in Karnataka, India, was once the glorious capital of the Vijayanagara Empire, founded in 1336 CE by Harihara and Bukka Raya. Mythologically linked to Kishkindha from the Ramayana, Hampi grew into a thriving spiritual, commercial, and artistic center, especially under the reign of Krishnadevaraya in the 16th century. Known for its magnificent temples, intricate stone architecture, and vibrant bazaars, it attracted travelers from across the world. However, in 1565, after the Battle of Talikota, it was invaded and destroyed by the Deccan Sultanates, leading to its tragic decline. Rediscovered by British historians in the 19th century, Hampi today stands as a vast open-air museum of ruins, mythology, and unmatched historical grandeur.
+      </p>
+    </div>
+    <div class="image">
+      <img src="https://i.pinimg.com/736x/22/1b/d0/221bd001c6f61445864faae447ba2620.jpg" alt="Hampi History Image">
+    </div>
+  </section>
+
+  <!-- Section 2: Highlight Cards -->
+  <section class="highlights">
+    <div class="highlight-card">
+      <img src="https://i.pinimg.com/736x/e4/66/a2/e466a200dcddeb5c67ba385689f828c3.jpg" alt="">
+      <p>VIRUPAKSHA TEMPLE</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://i.pinimg.com/736x/28/7f/77/287f7711bf9331b768e60ac7e27fe8ca.jpg" alt="">
+      <p>VITTALA TEMPLE & STONE CHARIOT</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://i.pinimg.com/736x/1a/9e/f0/1a9ef076a3ae25fda261dfb7b9db84de.jpg" alt="">
+      <p>HAMPI BAZAAR</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnEyfTQasYfIrEoG_A96HZ2n-_Tpg-onwJmw&s" alt="">
+      <p>MATANGA HILL</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://s3.eu-west-2.amazonaws.com/tripspell/EXPERIENCE/lotus-mahal-hampi/lotus-mahal-hampi-0_high" alt="">
+      <p>LOTUS MAHAL & ELEPHANT STABLES</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://s7ap1.scene7.com/is/image/incredibleindia/anegundi-hampi-karnataka-1-attr-hero?qlt=82&ts=1726721976402" alt="">
+      <p>ANEGUNDI</p>
+    </div>
+  </section>
+
+  
+
+  <!-- Section 3 : Itinerary -->
+  <section class="itinerary">
+    <img src="https://i.pinimg.com/736x/81/a8/4c/81a84c7906a624b0774b4fdfb12ad01d.jpg" alt="Itinerary Image">
+    <div class="itinerary-content">
+      <h1>Itinerary</h1>
+      <p>📅 BEST TIME TO VISIT<br>
+      October to February – Cool, dry weather and the annual Hampi Utsav (November), a vibrant cultural festival.</p>
+
+      <p>🚉 HOW TO GET THERE<br>
+      Nearest Airport: Hubli (160 km)<br>
+      Nearest Railway: Hospet Junction (13 km)<br>
+      By Road: Overnight buses from Bangalore, Hyderabad, Goa</p>
+
+      <p>🏨 WHERE TO STAY<br>
+      Budget: Mowgli Guesthouse, Gouthami Guesthouse<br>
+      Mid-Range: Heritage Resort Hampi, Clarks Inn<br>
+      Literary Retreats: Check for heritage homes offering writer’s residencies (seasonal)</p>
+
+      <p>🍛 LOCAL FLAVORS & CAFÉS<br>
+      Mango Tree Café: Scenic, riverside, great for reading.<br>
+      Laughing Buddha Café: Laid-back vibes, backpacker hub.<br>
+      Gopi Roof Restaurant: Authentic South Indian fare.</p>
+    </div>
+  </section>
+  <style>
+  .testimonials {
+    background-color: #FAF6F1;
+    padding: 80px 5%;
+    text-align: center;
+  }
+
+  .testimonials h2 {
+    font-size: 48px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    margin-bottom: 60px;
+    color: #333;
+  }
+
+  .testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .testimonial-card {
+    background-color: white;
+    border: 1px solid #333;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+  }
+
+  .testimonial-card p {
+    font-size: 16px;
+    padding: 20px;
+    line-height: 1.5;
+    color: #333;
+    font-family: 'Georgia', serif;
+  }
+
+  @media (max-width: 900px) {
+    .testimonial-card {
+      width: 100%;
+    }
+  }
+  
+    .testimonials {
+      background-color: #FAF6F1;
+      padding: 80px 5%;
+      text-align: center;
+    }
+  
+    .testimonials h2 {
+      font-size: 48px;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 300;
+      margin-bottom: 60px;
+      color: #333;
+    }
+  
+    .testimonial-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  
+    .testimonial-card {
+      background-color: white;
+      border: 1px solid #333;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .testimonial-card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+    }
+  
+    .testimonial-card p {
+      font-size: 16px;
+      padding: 20px;
+      line-height: 1.5;
+      color: #333;
+      font-family: 'Georgia', serif;
+    }
+  
+    @media (max-width: 900px) {
+      .testimonial-card {
+        width: 100%;
+      }
+    }
+  
+</style>
+
+</body>
+</html>
+
+<!-- Section 5: Testimonials -->
+<section class="testimonials">
+    <h2>What Our Travelers Say </h2>
+    <div class="testimonial-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/cc/63/52/cc6352dd3cf9263aa5cc5c1fa6593017.jpg" alt="Traveler 1">
+        <p>"Walking through Hampi felt like stepping into an epic—every stone tells a story, every ruin echoes with the grandeur of a forgotten empire."<br>— Ananya, India</p>
+      </div>
+  
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/60/c8/e1/60c8e18e4b04814b97634cf9a8128a9d.jpg" alt="Traveler 2">
+        <p>"Sunrise from Matanga Hill was magical. I sat there sketching the landscape and couldn’t believe such a place exists—it’s history, nature, and mythology all rolled into one."<br>— Luca, Italy</p>
+      </div>
+  
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/e3/14/96/e31496de96113e7b35e38ce3c2da86a6.jpg" alt="Traveler 3">
+        <p>"The local guides brought the temples to life with tales from the Ramayana and the Vijayanagara kings. I came for the architecture but stayed for the stories."<br>— Maya, USA</p>
+      </div>
+    </div>
+  </section>
+  
+  <style>
