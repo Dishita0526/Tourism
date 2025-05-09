@@ -23,21 +23,7 @@
       padding: 80px 5%;
     }
 
-    /* Common animation classes */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    img, .Varkala-image {
-      animation: fadeIn 2s ease-in forwards;
-    }
-
-    /* Hover zoom effect */
-    img:hover, .Varkala-image:hover {
-      transform: scale(1.03);
-      transition: transform 0.4s ease;
-    }
+    
 
     /* Section 1 - Varkala Landing */
     .Varkala-section {
@@ -49,6 +35,7 @@
     .Varkala-image {
       flex: 1;
       background: url('https://s3.india.com/wp-content/uploads/2024/08/Discover-Varkala_-Your-Ultimate-Guide-To-A-Summer-Escape-In-Southern-India.jpg?impolicy=Medium_Widthonly&w=800&h=541') center center/cover no-repeat;
+    animation: fadeIn 2s ease-in forwards; /* Animation applied here */
     }
 
     .Varkala-text {
@@ -203,6 +190,18 @@
     }
 
     /* Testimonials Section */
+    /* Common animation classes */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Hover zoom effect */
+    img:hover, .Varkala-image:hover {
+      transform: scale(1.03);
+      transition: transform 0.4s ease;
+    }
+    
     .testimonials {
       background-color: #FAF6F1;
       padding: 80px 5%;
