@@ -32,6 +32,7 @@
       .nubra-valley-image {
         flex: 1;
         background: url('https://i.pinimg.com/736x/f9/5a/b4/f95ab49bf3388375f65f1eea6c171131.jpg') center center/cover no-repeat;
+        animation: fadeIn 2s ease-in forwards; /* Animation applied here */
       }
   
       .nubra-valley-text {
@@ -268,6 +269,19 @@
     </div>
   </section>
   <style>
+  /* Common animation classes */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Hover zoom effect */
+    img:hover, .nubra-image:hover {
+      transform: scale(1.03);
+      transition: transform 0.4s ease;
+    }
+
+  
   .testimonials {
     background-color: #FAF6F1;
     padding: 80px 5%;

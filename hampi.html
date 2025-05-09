@@ -22,43 +22,45 @@
       width: 100%;
       padding: 80px 5%;
     }
+
     /* Section 1 - Hampi Landing */
     .hampi-section {
-        display: flex;
-        flex-direction: row;
-        height: 100vh;
-      }
-  
-      .hampi-image {
-        flex: 1;
-        background: url('https://i.pinimg.com/736x/9e/b9/2d/9eb92dade95b3da029060ad184452af1.jpg') center center/cover no-repeat;
-      }
-  
-      .hampi-text {
-        flex: 1;
-        background-color: #fdf1ea;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 60px;
-        flex-direction: column;
-        text-align: left;
-      }
-  
-      .hampi-text h1 {
-        font-family: 'DM Serif Display', serif;
-        font-size: 100px;
-        color: #b55228;
-        margin-bottom: 20px;
-      }
-  
-      .hampi-text p {
-        font-size: 12px;
-        color: #b55228;
-        font-weight: 500;
-        max-width: 300px;
-        line-height: 1.6;
-      }
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+    }
+
+    .hampi-image {
+      flex: 1;
+      background: url('https://i.pinimg.com/736x/9e/b9/2d/9eb92dade95b3da029060ad184452af1.jpg') center center/cover no-repeat;
+      animation: fadeIn 2s ease-in forwards; /* Animation applied here */
+    }
+
+    .hampi-text {
+      flex: 1;
+      background-color: #fdf1ea;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .hampi-text h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 100px;
+      color: #b55228;
+      margin-bottom: 20px;
+    }
+
+    .hampi-text p {
+      font-size: 12px;
+      color: #b55228;
+      font-weight: 500;
+      max-width: 300px;
+      line-height: 1.6;
+    }
 
     /* Section 1: History */
     .history {
@@ -92,7 +94,7 @@
       border-radius: 100px 100px 0 0;
     }
 
-    /* Section 2: Scrollable Highlight Cards */
+    /* Section 2: Highlight Cards */
     .highlights {
       background-color: #C55A1D;
       display: flex;
@@ -120,8 +122,6 @@
       margin-top: 12px;
     }
 
-
-     
     /* Section 3: Itinerary */
     .itinerary {
       background-color: #9B6846;
@@ -186,11 +186,74 @@
         font-size: 60px;
       }
     }
+
+    /* Common animation classes */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Hover zoom effect */
+    img:hover, .hampi-image:hover {
+      transform: scale(1.03);
+      transition: transform 0.4s ease;
+    }
+
+    .testimonials {
+      background-color: #FAF6F1;
+      padding: 80px 5%;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      font-size: 48px;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 300;
+      margin-bottom: 60px;
+      color: #333;
+    }
+
+    .testimonial-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .testimonial-card {
+      background-color: white;
+      border: 1px solid #333;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .testimonial-card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+    }
+
+    .testimonial-card p {
+      font-size: 16px;
+      padding: 20px;
+      line-height: 1.5;
+      color: #333;
+      font-family: 'Georgia', serif;
+    }
+
+    @media (max-width: 900px) {
+      .testimonial-card {
+        width: 100%;
+      }
+    }
+
   </style>
 </head>
 <body>
 
-     <!-- Section 1: Landing -->
+  <!-- Section 1: Landing -->
   <section class="hampi-section">
     <div class="hampi-image"></div>
     <div class="hampi-text">
@@ -240,8 +303,6 @@
     </div>
   </section>
 
-  
-
   <!-- Section 3 : Itinerary -->
   <section class="itinerary">
     <img src="https://i.pinimg.com/736x/81/a8/4c/81a84c7906a624b0774b4fdfb12ad01d.jpg" alt="Itinerary Image">
@@ -266,114 +327,9 @@
       Gopi Roof Restaurant: Authentic South Indian fare.</p>
     </div>
   </section>
-  <style>
-  .testimonials {
-    background-color: #FAF6F1;
-    padding: 80px 5%;
-    text-align: center;
-  }
 
-  .testimonials h2 {
-    font-size: 48px;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 300;
-    margin-bottom: 60px;
-    color: #333;
-  }
-
-  .testimonial-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-
-  .testimonial-card {
-    background-color: white;
-    border: 1px solid #333;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .testimonial-card img {
-    width: 100%;
-    height: 270px;
-    object-fit: cover;
-  }
-
-  .testimonial-card p {
-    font-size: 16px;
-    padding: 20px;
-    line-height: 1.5;
-    color: #333;
-    font-family: 'Georgia', serif;
-  }
-
-  @media (max-width: 900px) {
-    .testimonial-card {
-      width: 100%;
-    }
-  }
-  
-    .testimonials {
-      background-color: #FAF6F1;
-      padding: 80px 5%;
-      text-align: center;
-    }
-  
-    .testimonials h2 {
-      font-size: 48px;
-      font-family: 'Helvetica Neue', sans-serif;
-      font-weight: 300;
-      margin-bottom: 60px;
-      color: #333;
-    }
-  
-    .testimonial-grid {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-  
-    .testimonial-card {
-      background-color: white;
-      border: 1px solid #333;
-      width: 300px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .testimonial-card img {
-      width: 100%;
-      height: 270px;
-      object-fit: cover;
-    }
-  
-    .testimonial-card p {
-      font-size: 16px;
-      padding: 20px;
-      line-height: 1.5;
-      color: #333;
-      font-family: 'Georgia', serif;
-    }
-  
-    @media (max-width: 900px) {
-      .testimonial-card {
-        width: 100%;
-      }
-    }
-  
-</style>
-
-</body>
-</html>
-
-<!-- Section 5: Testimonials -->
-<section class="testimonials">
+  <!-- Section 5: Testimonials -->
+  <section class="testimonials">
     <h2>What Our Travelers Say </h2>
     <div class="testimonial-grid">
       <!-- Testimonial 1 -->
@@ -381,13 +337,13 @@
         <img src="https://i.pinimg.com/736x/cc/63/52/cc6352dd3cf9263aa5cc5c1fa6593017.jpg" alt="Traveler 1">
         <p>"Walking through Hampi felt like stepping into an epic—every stone tells a story, every ruin echoes with the grandeur of a forgotten empire."<br>— Ananya, India</p>
       </div>
-  
+
       <!-- Testimonial 2 -->
       <div class="testimonial-card">
         <img src="https://i.pinimg.com/736x/60/c8/e1/60c8e18e4b04814b97634cf9a8128a9d.jpg" alt="Traveler 2">
         <p>"Sunrise from Matanga Hill was magical. I sat there sketching the landscape and couldn’t believe such a place exists—it’s history, nature, and mythology all rolled into one."<br>— Luca, Italy</p>
       </div>
-  
+
       <!-- Testimonial 3 -->
       <div class="testimonial-card">
         <img src="https://i.pinimg.com/736x/e3/14/96/e31496de96113e7b35e38ce3c2da86a6.jpg" alt="Traveler 3">
@@ -395,5 +351,6 @@
       </div>
     </div>
   </section>
-  
-  <style>
+
+</body>
+</html>

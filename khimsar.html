@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Khimsar Explorer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #F4EAE0;
+      color: #4E3D53;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+
+    section {
+      width: 100%;
+      padding: 80px 5%;
+    }
+    /* Section 1 - Hampi Landing */
+    .khimsar-section {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+      }
+  
+      .khimsar-image {
+        flex: 1;
+        background: url('https://i.pinimg.com/736x/c7/17/21/c717215a18b31b7dcc35f58284c2f434.jpg') center center/cover no-repeat;
+        animation: fadeIn 2s ease-in forwards; /* Animation applied here */
+      }
+  
+      .khimsar-text {
+        flex: 1;
+        background-color: #fdf1ea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px;
+        flex-direction: column;
+        text-align: left;
+      }
+  
+      .khimsar-text h1 {
+        font-family: 'DM Serif Display', serif;
+        font-size: 100px;
+        color: #4a6d82;
+        margin-bottom: 20px;
+      }
+  
+      .khimsar-text p {
+        font-size: 12px;
+        color: #4a6d82;
+        font-weight: 500;
+        max-width: 300px;
+        line-height: 1.6;
+      }
+
+    /* Section 1: History */
+    .history {
+      background-color: #F4EAE0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .history .text {
+      flex: 1 1 55%;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-right: 40px;
+    }
+
+    .history h1 {
+      font-size: 100px;
+      color: #4f7b73;
+      margin-bottom: 20px;
+    }
+
+    .history .image {
+      flex: 1 1 40%;
+    }
+
+    .history img {
+      width: 100%;
+      border-radius: 100px 100px 0 0;
+    }
+
+    
+     
+    /* Section 3: Itinerary */
+    .itinerary {
+      background-color:#7ea98c ;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      color: white;
+    }
+
+    .itinerary img {
+      width: 40%;
+      border-radius: 10px;
+      margin-right: 5%;
+    }
+
+    .itinerary-content {
+      flex: 1;
+    }
+
+    .itinerary h1 {
+      font-size: 70px;
+      margin-bottom: 30px;
+    }
+
+    .itinerary-content p {
+      margin-bottom: 20px;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 1024px) {
+      .highlight-card, .place-item {
+        width: calc(50% - 20px);
+      }
+
+      .itinerary {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .itinerary img {
+        width: 80%;
+        margin: 0 auto 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .highlight-card, .place-item {
+        width: 100%;
+      }
+
+      .history {
+        flex-direction: column;
+      }
+
+      .history .text, .history .image {
+        flex: 1 1 100%;
+        padding: 0;
+      }
+
+      .history h1 {
+        font-size: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+     <!-- Section 1: Landing -->
+  <section class="khimsar-section">
+    <div class="khimsar-image"></div>
+    <div class="khimsar-text">
+      <h1>Khimsar</h1>
+      <p>In Khimsar, the desert wind carries tales of valor—where every grain of sand guards the legacy of Rajput warriors and the silent strength of ancient forts</p>
+    </div>
+  </section>
+
+  <!-- Section 1: History -->
+  <section class="history">
+    <div class="text">
+      <h1>History</h1>
+      <p>
+        KHIMSAR, A HIDDEN GEM IN THE HEART OF RAJASTHAN, INDIA, IS STEEPED IN THE LEGACY OF THE RAJPUTANA WARRIORS AND DESERT KINGDOMS. FOUNDED IN THE 16TH CENTURY BY RAO KARAMSJI, THE EIGHTH SON OF RAO JODHA—THE FOUNDER OF JODHPUR—KHIMSAR FLOURISHED AS A STRATEGIC MILITARY OUTPOST ON THE ANCIENT TRADE ROUTES BETWEEN MARWAR AND THE THAR DESERT. DOMINATED BY THE MAJESTIC KHIMSAR FORT, WHICH SEAMLESSLY BLENDS MILITARY ARCHITECTURE WITH ROYAL SPLENDOR, THE TOWN REFLECTS A HERITAGE OF VALOR, LUXURY, AND ENDURANCE. SURROUNDED BY SAND DUNES AND REMOTE VILLAGES, KHIMSAR OFFERS A TRANQUIL YET VIVID GLIMPSE INTO RAJASTHAN'S DESERT CULTURE, WHERE HISTORY WHISPERS THROUGH WIND-CARVED WALLS AND TIME STANDS STILL UNDER STARRY SKIES.      </p>
+    </div>
+    <div class="image">
+      <img src="https://i.pinimg.com/736x/3e/39/a3/3e39a3282839f2b2d4022d7253192287.jpg" alt="Khimsar History Image">
+    </div>
+  </section>
+
+  
+
+  
+  
+
+<!-- Section 3 : Itinerary -->
+<section class="itinerary">
+    <img src="https://i.pinimg.com/736x/7d/26/7f/7d267fd09e6704627483cdf43865a789.jpg" alt="Itinerary Image Khimsar">
+    <div class="itinerary-content">
+      <h1>Itinerary</h1>
+      <p>📅 BEST TIME TO VISIT<br>
+      October to March – Pleasant winter weather ideal for desert safaris, fort exploration, and cultural experiences.</p>
+  
+      <p>🚉 HOW TO GET THERE<br>
+      Nearest Airport: Jodhpur Airport (95 km)<br>
+      Nearest Railway: Nagaur Railway Station (40 km)<br>
+      By Road: Well-connected by road from Jodhpur, Bikaner, and Jaipur</p>
+  
+      <p>🏨 WHERE TO STAY<br>
+      Heritage: Khimsar Fort (now a luxury heritage hotel)<br>
+      Mid-Range: Welcomhotel by ITC, Local Desert Camps<br>
+      Rustic Retreats: Dune-side eco-stays and traditional homestays available</p>
+  
+      <p>🍛 LOCAL FLAVORS & CAFÉS<br>
+      Fort Restaurant: Rajasthani thali with royal ambience.<br>
+      Sand Dune Dinners: Dine under the stars with folk music.<br>
+      Local Dhaba Cuisine: Try ker sangri, bajre ki roti, and laal maas for authentic taste.</p>
+    </div>
+  </section>
+  
+  <style>
+
+    /* Common animation classes */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Hover zoom effect */
+    img:hover, .hampi-image:hover {
+      transform: scale(1.03);
+      transition: transform 0.4s ease;
+    }
+
+  .testimonials {
+    background-color: #FAF6F1;
+    padding: 80px 5%;
+    text-align: center;
+  }
+
+  .testimonials h2 {
+    font-size: 48px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    margin-bottom: 60px;
+    color: #333;
+  }
+
+  .testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .testimonial-card {
+    background-color: white;
+    border: 1px solid #333;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+  }
+
+  .testimonial-card p {
+    font-size: 16px;
+    padding: 20px;
+    line-height: 1.5;
+    color: #333;
+    font-family: 'Georgia', serif;
+  }
+
+  @media (max-width: 900px) {
+    .testimonial-card {
+      width: 100%;
+    }
+  }
+  
+    .testimonials {
+      background-color: #FAF6F1;
+      padding: 80px 5%;
+      text-align: center;
+    }
+  
+    .testimonials h2 {
+      font-size: 48px;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 300;
+      margin-bottom: 60px;
+      color: #333;
+    }
+  
+    .testimonial-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  
+    .testimonial-card {
+      background-color: white;
+      border: 1px solid #333;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .testimonial-card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+    }
+  
+    .testimonial-card p {
+      font-size: 16px;
+      padding: 20px;
+      line-height: 1.5;
+      color: #333;
+      font-family: 'Georgia', serif;
+    }
+  
+    @media (max-width: 900px) {
+      .testimonial-card {
+        width: 100%;
+      }
+    }
+  
+</style>
+
+</body>
+</html>
+
+<!-- Section 5: Testimonials -->
+<section class="testimonials">
+    <h2>What Our Travelers Say </h2>
+    <div class="testimonial-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/01/b9/27/01b927dd1ba6d3c7a0a2479ec05bfe3f.jpg" alt="Traveler 1">
+        <p>"Spending a night in the Khimsar Dunes Village was like being wrapped in a timeless dream—silence, stars, and the soft whisper of the desert wind."
+          <br> — Aarav, India</p>
+      </div>
+  
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/4d/3a/b5/4d3ab5f620c36be5cfd744558030bf8b.jpg" alt="Traveler 2">
+        <p>"The fort felt alive. As I walked through its corridors, I could almost hear the echoes of ancient courtly whispers and footsteps on stone."<br>— Sofia, Spain</p>
+      </div>
+  
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/68/38/7e/68387e3f6b6ca7d499edb7fb5849e0ad.jpg" alt="Traveler 3">
+        <p>"Khimsar gave me what the big cities couldn’t—authentic stories, unfiltered landscapes, and the kind of peace you don’t realize you need until you find it."<br>— Caleb, Canada</p>
+      </div>
+    </div>
+  </section>
+  
+  <style>
