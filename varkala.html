@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Varkala Explorer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #F4EAE0;
+      color: #4E3D53;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+
+    section {
+      width: 100%;
+      padding: 80px 5%;
+    }
+    /* Section 1 - Varkala Landing */
+    .Varkala-section {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+      }
+  
+      .Varkala-image {
+        flex: 1;
+        background: url('https://s3.india.com/wp-content/uploads/2024/08/Discover-Varkala_-Your-Ultimate-Guide-To-A-Summer-Escape-In-Southern-India.jpg?impolicy=Medium_Widthonly&w=800&h=541') center center/cover no-repeat;
+      }
+  
+      .Varkala-text {
+        flex: 1;
+        background-color: #fdf1ea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px;
+        flex-direction: column;
+        text-align: left;
+      }
+  
+      .Varkala-text h1 {
+        font-family: 'DM Serif Display', serif;
+        font-size: 100px;
+        color: #b55228;
+        margin-bottom: 20px;
+      }
+  
+      .Varkala-text p {
+        font-size: 12px;
+        color: #b55228;
+        font-weight: 500;
+        max-width: 300px;
+        line-height: 1.6;
+      }
+
+    /* Section 1: History */
+    .history {
+      background-color: #F4EAE0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .history .text {
+      flex: 1 1 55%;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-right: 40px;
+    }
+
+    .history h1 {
+      font-size: 100px;
+      color: #6B4C74;
+      margin-bottom: 20px;
+    }
+
+    .history .image {
+      flex: 1 1 40%;
+    }
+
+    .history img {
+      width: 100%;
+      border-radius: 100px 100px 0 0;
+    }
+
+    /* Section 2: Scrollable Highlight Cards */
+    .highlights {
+      background-color: #C55A1D;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .highlight-card {
+      width: calc(33% - 20px);
+      background-color: #C55A1D;
+      text-align: center;
+    }
+
+    .highlight-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .highlight-card p {
+      color: #fff;
+      font-size: 22px;
+      letter-spacing: 3px;
+      margin-top: 12px;
+    }
+
+
+     
+    /* Section 3: Itinerary */
+    .itinerary {
+      background-color: #9B6846;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      color: white;
+    }
+
+    .itinerary img {
+      width: 40%;
+      border-radius: 10px;
+      margin-right: 5%;
+    }
+
+    .itinerary-content {
+      flex: 1;
+    }
+
+    .itinerary h1 {
+      font-size: 70px;
+      margin-bottom: 30px;
+    }
+
+    .itinerary-content p {
+      margin-bottom: 20px;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 1024px) {
+      .highlight-card, .place-item {
+        width: calc(50% - 20px);
+      }
+
+      .itinerary {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .itinerary img {
+        width: 80%;
+        margin: 0 auto 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .highlight-card, .place-item {
+        width: 100%;
+      }
+
+      .history {
+        flex-direction: column;
+      }
+
+      .history .text, .history .image {
+        flex: 1 1 100%;
+        padding: 0;
+      }
+
+      .history h1 {
+        font-size: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+     <!-- Section 1: Landing -->
+  <section class="Varkala-section">
+    <div class="Varkala-image"></div>
+    <div class="Varkala-text">
+      <h1>Varkala</h1>
+      <p>In Varkala, the sea kisses the cliffs, and time stands still between waves and whispers.</p>
+    </div>
+  </section>
+
+  <!-- Section 1: History -->
+  <section class="history">
+    <div class="text">
+      <h1>History</h1>
+      <p>
+        Varkala, perched along the scenic Arabian Sea in Kerala, is a tranquil coastal town renowned for its dramatic cliffs, spiritual ambiance, and natural beauty. A unique blend of beachside charm and cultural richness, Varkala offers a peaceful escape with its golden sands, swaying palms, and the iconic Varkala Cliff that overlooks the sea. It is home to the ancient Janardanaswamy Temple, a significant pilgrimage site, and the sacred Papanasam Beach, believed to cleanse sins with its holy waters. Visitors can enjoy yoga retreats, Ayurvedic therapies, surfing, and vibrant local markets, while also soaking in stunning sunsets and coastal cuisine. Easily accessible from Thiruvananthapuram, Varkala provides an enriching experience for those seeking relaxation, spirituality, and a deeper connection with Kerala’s serene coastal culture.
+      </p>
+    </div>
+    <div class="image">
+      <img src="https://media.istockphoto.com/id/527691208/photo/varkala-beach-kerala-india.jpg?s=612x612&w=0&k=20&c=ECYpRZQi-GEJwzVjurI427EelRBWhpTJp1PMuDgK3Gk=" alt="Varkala History Image">
+    </div>
+  </section>
+
+  <!-- Section 2: Highlight Cards -->
+  <section class="highlights">
+    <div class="highlight-card">
+      <img src="https://png.pngtree.com/background/20230331/original/pngtree-sunset-on-varkala-beach-popular-tourist-destination-in-kerala-state-vector-picture-image_2220071.jpg" alt="">
+      <p>VARKALA BEACH</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2023/12/15/364622184c1ac094f23d19f6efca63f5_1000x1000.jpg" alt="">
+      <p>JANARDANASWAMY TEMPLE</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://bookmetickets.com/static/falcon/img/stock/page/5bb2d94d04a28675b2b99da3/65d71e8243ad38085d92a1c1/Sivagiri_Mutt-Varkala.jpg" alt="">
+      <p>SIVAGIRI MUTT</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://www.dtpckasaragod.com/uploads/picture_gallery/gallery_images/kappil-beach-1920x1080-20230506160704640747.webp" alt="">
+      <p>KAPPIL BACKWATERS</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/e9/3a/17/photo1jpg.jpg?w=1200&h=-1&s=1" alt="">
+      <p>ANJENGO FORT</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://www.trawell.in/admin/images/upload/377739811Ponnumthuruthu.jpg" alt="">
+      <p>PONNUMTHURUTHU ISLAND</p>
+    </div>
+  </section>
+
+  
+
+  <!-- Section 3 : Itinerary -->
+  <section class="itinerary">
+    <img src="https://thumbs.dreamstime.com/b/varkala-beach-kerala-india-sunny-day-varkala-beach-kerala-india-358068173.jpg" alt="Itinerary Image">
+    <div class="itinerary-content">
+      <h1>Itinerary</h1>
+      <p>📅 BEST TIME TO VISIT<br>
+      October to March – Pleasant weather, ideal for beach activities and sightseeing. Don’t miss Sivagiri Pilgrimage (December 30 – January 1), a spiritual gathering honoring Sree Narayana Guru, drawing thousands of devotees.</p>
+
+      <p>🚉 HOW TO GET THERE<br>
+      Nearest Airport: Trivandrum International Airport (TRV) – ~40 km<br>
+      Nearest Railway: Varkala Sivagiri Railway Station<br>
+      By Road: Accessible via NH66; regular buses and taxis from Trivandrum and Kollam</p>
+
+      <p>🏨 WHERE TO STAY<br>
+      Budget: The Lost Hostel Varkala – Backpacker-friendly with a lively vibe<br>
+      Mid-Range:  Inda Hotel, Palm Tree Heritage – Great comfort near the cliff and beach<br>
+      Wellness & Retreats: Soul & Surf, Deshadan Cliff & Beach Resort – Ideal for yoga, surfing, and relaxation</p>
+
+      <p>🍛 LOCAL FLAVORS & CAFÉS<br>
+      God’s Own Country Kitchen:     Traditional Kerala meals with a homely touch<br>
+      Darjeeling Café:     Cliffside favorite for seafood, smoothies, and ocean views.<br>
+      The Juice Shack:     Great for healthy bowls, fresh juices, and relaxed sunset views.</p>
+    </div>
+  </section>
+  <style>
+  .testimonials {
+    background-color: #FAF6F1;
+    padding: 80px 5%;
+    text-align: center;
+  }
+
+  .testimonials h2 {
+    font-size: 48px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    margin-bottom: 60px;
+    color: #333;
+  }
+
+  .testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .testimonial-card {
+    background-color: white;
+    border: 1px solid #333;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+  }
+
+  .testimonial-card p {
+    font-size: 16px;
+    padding: 20px;
+    line-height: 1.5;
+    color: #333;
+    font-family: 'Georgia', serif;
+  }
+
+  @media (max-width: 900px) {
+    .testimonial-card {
+      width: 100%;
+    }
+  }
+  
+    .testimonials {
+      background-color: #FAF6F1;
+      padding: 80px 5%;
+      text-align: center;
+    }
+  
+    .testimonials h2 {
+      font-size: 48px;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 300;
+      margin-bottom: 60px;
+      color: #333;
+    }
+  
+    .testimonial-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  
+    .testimonial-card {
+      background-color: white;
+      border: 1px solid #333;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .testimonial-card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+    }
+  
+    .testimonial-card p {
+      font-size: 16px;
+      padding: 20px;
+      line-height: 1.5;
+      color: #333;
+      font-family: 'Georgia', serif;
+    }
+  
+    @media (max-width: 900px) {
+      .testimonial-card {
+        width: 100%;
+      }
+    }
+  
+</style>
+
+</body>
+</html>
+
+<!-- Section 5: Testimonials -->
+<section class="testimonials">
+    <h2>What Our Travelers Say </h2>
+    <div class="testimonial-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/cc/63/52/cc6352dd3cf9263aa5cc5c1fa6593017.jpg" alt="Traveler 1">
+        <p>"Varkala was unlike any coastal town I’ve visited. Sitting on the cliff at sunrise, sipping chai as the waves rolled in below, I felt a kind of stillness I didn’t know I needed. It’s a place that lets you breathe a little deeper."<br>— Ananya, India</p>
+      </div>
+  
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/60/c8/e1/60c8e18e4b04814b97634cf9a8128a9d.jpg" alt="Traveler 2">
+        <p>"I came to Varkala for yoga and the beach, but I found so much more—Ayurvedic healing, soulful food, and conversations with locals that stayed with me long after. It’s a blend of calm and culture that you rarely find."<br>— Luca, Italy</p>
+      </div>
+  
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/e3/14/96/e31496de96113e7b35e38ce3c2da86a6.jpg" alt="Traveler 3">
+        <p>"There’s something magical about Varkala. I spent my days exploring quiet temples, watching fishermen pull in their nets, and letting time slow down. It’s not just a destination—it’s a gentle reminder to live more mindfully."<br>— Maya, USA</p>
+      </div>
+    </div>
+  </section>
+  
+  <style>
