@@ -1,11 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>majuli Explorer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #F4EAE0;
+      color: #4E3D53;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+
+    section {
+      width: 100%;
+      padding: 80px 5%;
+    }
+    /* Section 1 - majuli Landing */
+    .majuli-section {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+      }
+  
+      .majuli-image {
+        flex: 1;
+        background: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/8f/31/32/copyrights-reserved-with.jpg?w=1400&h=-1&s=1') center center/cover no-repeat;
+      }
+  
+      .majuli-text {
+        flex: 1;
+        background-color: #fdf1ea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px;
+        flex-direction: column;
+        text-align: left;
+      }
+  
+      .majuli-text h1 {
+        font-family: 'DM Serif Display', serif;
+        font-size: 100px;
+        color: #b55228;
+        margin-bottom: 20px;
+      }
+  
+      .majuli-text p {
+        font-size: 12px;
+        color: #b55228;
+        font-weight: 500;
+        max-width: 300px;
+        line-height: 1.6;
+      }
+
+    /* Section 1: History */
+    .history {
+      background-color: #F4EAE0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .history .text {
+      flex: 1 1 55%;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-right: 40px;
+    }
+
+    .history h1 {
+      font-size: 100px;
+      color: #6B4C74;
+      margin-bottom: 20px;
+    }
+
+    .history .image {
+      flex: 1 1 40%;
+    }
+
+    .history img {
+      width: 100%;
+      border-radius: 100px 100px 0 0;
+    }
+
+    /* Section 2: Scrollable Highlight Cards */
+    .highlights {
+      background-color: #C55A1D;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .highlight-card {
+      width: calc(33% - 20px);
+      background-color: #C55A1D;
+      text-align: center;
+    }
+
+    .highlight-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .highlight-card p {
+      color: #fff;
+      font-size: 22px;
+      letter-spacing: 3px;
+      margin-top: 12px;
+    }
+
+
+     
+    /* Section 3: Itinerary */
+    .itinerary {
+      background-color: #9B6846;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      color: white;
+    }
+
+    .itinerary img {
+      width: 40%;
+      border-radius: 10px;
+      margin-right: 5%;
+    }
+
+    .itinerary-content {
+      flex: 1;
+    }
+
+    .itinerary h1 {
+      font-size: 70px;
+      margin-bottom: 30px;
+    }
+
+    .itinerary-content p {
+      margin-bottom: 20px;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 1024px) {
+      .highlight-card, .place-item {
+        width: calc(50% - 20px);
+      }
+
+      .itinerary {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .itinerary img {
+        width: 80%;
+        margin: 0 auto 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .highlight-card, .place-item {
+        width: 100%;
+      }
+
+      .history {
+        flex-direction: column;
+      }
+
+      .history .text, .history .image {
+        flex: 1 1 100%;
+        padding: 0;
+      }
+
+      .history h1 {
+        font-size: 60px;
+      }
+    }
+  </style>
 </head>
 <body>
-    I have changed this file 
+
+     <!-- Section 1: Landing -->
+  <section class="majuli-section">
+    <div class="majuli-image"></div>
+    <div class="majuli-text">
+      <h1>Majuli</h1>
+      <p>In Majuli, the mist rises with hymns of forgotten sages, and every ripple in the river sings of timeless devotion and fading legends</p>
+    </div>
+  </section>
+
+  <!-- Section 1: History -->
+  <section class="history">
+    <div class="text">
+      <h1>History</h1>
+      <p>
+        Majuli, nestled in the mighty Brahmaputra River in Assam, is a serene river island celebrated for its vibrant culture, spiritual heritage, and natural beauty, making it a unique destination for travelers. Known as the world's largest river island, Majuli offers a peaceful escape with its lush green landscapes, traditional Assamese villages, and centuries-old satras—Vaishnavite monasteries that showcase classical dance, music, and art. Visitors can experience local festivals like Raas Mahotsav, explore mask-making workshops, enjoy birdwatching, and interact with warm, hospitable communities. Easily accessible by ferry from Jorhat, Majuli provides an offbeat yet enriching journey into Assam’s cultural soul, ideal for those seeking authenticity, tranquility, and a connection with nature and tradition.
+      </p>
+    </div>
+    <div class="image">
+      <img src="maj1.jpg" alt="Majuli History Image">
+    </div>
+  </section>
+
+  <!-- Section 2: Highlight Cards -->
+  <section class="highlights">
+    <div class="highlight-card">
+      <img src="https://files.yappe.in/place/full/kamalabari-satra-6273702.webp" alt="">
+      <p>KAMALABARI SATRA</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://images.nativeplanet.com/img/2018/02/1-1518863165.jpg" alt="">
+      <p>MOLAI FOREST</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXaI-US-LvApHh7As70PnxiwAH6tXsg9fcw&s" alt="">
+      <p>CHAR CHAPORI</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxq2Zrz5MVGnfROg3kM1KlmchFE0TnwWt2vQ&s" alt="">
+      <p>SAMAGURI SATRA</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://media.istockphoto.com/id/971367558/photo/majuli-island.jpg?s=612x612&w=0&k=20&c=kiL9B6XR5CELwpTUAv3kzxXLMHOwJ_pWKAU3HPAkbCA=" alt="">
+      <p>UJANI MAJULI</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://www.tourmyindia.com/states/assam/images/Tengapania-1.jpg" alt="">
+      <p>TENGAPANIA</p>
+    </div>
+  </section>
+
+  
+
+  <!-- Section 3 : Itinerary -->
+  <section class="itinerary">
+    <img src="https://travellingslacker.com/wp-content/uploads/2021/01/A-Majuli-28-700x1024.jpeg" alt="Itinerary Image">
+    <div class="itinerary-content">
+      <h1>Itinerary</h1>
+      <p>📅 BEST TIME TO VISIT<br>
+      October to March – Pleasant weather with clear skies. Don’t miss Raas Mahotsav (November), a spiritual and theatrical festival that brings Majuli alive with dance, drama, and devotion.</p>
+
+      <p>🚉 HOW TO GET THERE<br>
+      Nearest Airport: Jorhat Airport (JOR) – 20 km<br>
+      Nearest Railway: Jorhat Town Railway Station<br>
+      By Ferry: From Nimatighat (Jorhat) – regular government and private ferries take ~1 hour to reach Majuli.</p>
+
+      <p>🏨 WHERE TO STAY<br>
+      Budget: Ygdrasill Bamboo Cottage, La Maison de Ananda<br>
+      Mid-Range: Dekasang Resort, Enchanting Majuli Eco Resort<br>
+      Literary Retreats: Satra-based homestays or Mask Makers’ Guesthouses for immersive experiences</p>
+
+      <p>🍛 LOCAL FLAVORS & CAFÉS<br>
+      Raas Bhojanalaya: Traditional Assamese thali made with local ingredients<br>
+      Majuli Chai Point: Sip local teas and snacks while watching the river traffic.<br>
+      Satra Kitchen (at some homestays): Offers home-cooked, sattvic meals – perfect for a cultural palate.</p>
+    </div>
+  </section>
+  <style>
+  .testimonials {
+    background-color: #FAF6F1;
+    padding: 80px 5%;
+    text-align: center;
+  }
+
+  .testimonials h2 {
+    font-size: 48px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    margin-bottom: 60px;
+    color: #333;
+  }
+
+  .testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .testimonial-card {
+    background-color: white;
+    border: 1px solid #333;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+  }
+
+  .testimonial-card p {
+    font-size: 16px;
+    padding: 20px;
+    line-height: 1.5;
+    color: #333;
+    font-family: 'Georgia', serif;
+  }
+
+  @media (max-width: 900px) {
+    .testimonial-card {
+      width: 100%;
+    }
+  }
+  
+    .testimonials {
+      background-color: #FAF6F1;
+      padding: 80px 5%;
+      text-align: center;
+    }
+  
+    .testimonials h2 {
+      font-size: 48px;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 300;
+      margin-bottom: 60px;
+      color: #333;
+    }
+  
+    .testimonial-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  
+    .testimonial-card {
+      background-color: white;
+      border: 1px solid #333;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .testimonial-card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+    }
+  
+    .testimonial-card p {
+      font-size: 16px;
+      padding: 20px;
+      line-height: 1.5;
+      color: #333;
+      font-family: 'Georgia', serif;
+    }
+  
+    @media (max-width: 900px) {
+      .testimonial-card {
+        width: 100%;
+      }
+    }
+  
+</style>
+
 </body>
 </html>
+
+<!-- Section 5: Testimonials -->
+<section class="testimonials">
+    <h2>What Our Travelers Say </h2>
+    <div class="testimonial-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/cc/63/52/cc6352dd3cf9263aa5cc5c1fa6593017.jpg" alt="Traveler 1">
+        <p>"Drifting along the Brahmaputra to Majuli felt like entering a world untouched by time—monks chanting, mustard fields swaying, and stories whispered by the wind"<br>— Ananya, India</p>
+      </div>
+  
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/60/c8/e1/60c8e18e4b04814b97634cf9a8128a9d.jpg" alt="Traveler 2">
+        <p>"I spent a morning watching artisans carve masks at Samaguri Satra. It was like watching history breathe through clay and color. Majuli is quiet, soulful art in motion."<br>— Luca, Italy</p>
+      </div>
+  
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/e3/14/96/e31496de96113e7b35e38ce3c2da86a6.jpg" alt="Traveler 3">
+        <p>"Staying in a bamboo hut by the river, I woke to birdsong and temple bells. The locals shared their world with such warmth—I came for nature, but I found belonging"<br>— Maya, USA</p>
+      </div>
+    </div>
+  </section>
+  
+  <style>
