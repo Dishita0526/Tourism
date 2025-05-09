@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lachung Explorer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f8e4fa;
+      color: #914691;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+
+    section {
+      width: 100%;
+      padding: 80px 5%;
+    }
+    /* Section 1 - lachung-valley Landing */
+    .lachung-section {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+      }
+  
+      .lachung-image {
+        flex: 1;
+        background: url('https://i.pinimg.com/736x/24/2c/b7/242cb79864254b389fe75f29611a9002.jpg') center center/cover no-repeat;
+        animation: fadeIn 2s ease-in forwards; /* Animation applied here */
+      }
+  
+      .lachung-text {
+        flex: 1;
+        background-color: #f5d2f6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px;
+        flex-direction: column;
+        text-align: left;
+      }
+  
+      .lachung-text h1 {
+        font-family: 'DM Serif Display', serif;
+        font-size: 100px;
+        color: #510345;
+        margin-bottom: 20px;
+      }
+  
+      .lachung-text p {
+        font-size: 12px;
+        color: #22011e;
+        font-weight: 500;
+        max-width: 300px;
+        line-height: 1.6;
+      }
+
+    /* Section 1: History */
+    .history {
+      background-color: #f7d7f5;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .history .text {
+      flex: 1 1 55%;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-right: 40px;
+    }
+
+    .history h1 {
+      font-size: 100px;
+      color: #650c50;
+      margin-bottom: 20px;
+    }
+
+    .history .image {
+      flex: 1 1 40%;
+    }
+
+    .history img {
+      width: 100%;
+      border-radius: 100px 100px 0 0;
+    }
+
+    /* Section 2: Scrollable Highlight Cards */
+    .highlights {
+      background-color: #f4c5f0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .highlight-card {
+      width: calc(33% - 20px);
+      background-color: #fcd8f9;
+      text-align: center;
+    }
+
+    .highlight-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .highlight-card p {
+      color: #8e088e;
+      font-size: 22px;
+      letter-spacing: 3px;
+      margin-top: 12px;
+    }
+
+
+     
+    /* Section 3: Itinerary */
+    .itinerary {
+      background-color: #f5d3f6;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      color: rgb(62, 3, 52);
+    }
+
+    .itinerary img {
+      width: 40%;
+      border-radius: 10px;
+      margin-right: 5%;
+    }
+
+    .itinerary-content {
+      flex: 1;
+    }
+
+    .itinerary h1 {
+      font-size: 70px;
+      margin-bottom: 30px;
+    }
+
+    .itinerary-content p {
+      margin-bottom: 20px;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 1024px) {
+      .highlight-card, .place-item {
+        width: calc(50% - 20px);
+      }
+
+      .itinerary {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .itinerary img {
+        width: 80%;
+        margin: 0 auto 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .highlight-card, .place-item {
+        width: 100%;
+      }
+
+      .history {
+        flex-direction: column;
+      }
+
+      .history .text, .history .image {
+        flex: 1 1 100%;
+        padding: 0;
+      }
+
+      .history h1 {
+        font-size: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+     <!-- Section 1: Landing -->
+  <section class="lachung-section">
+    <div class="lachung-image"></div>
+    <div class="lachung-text">
+      <h1>Lachung </h1>
+      <p>IN THE LAP OF THE HIMALAYAS, LACHUNG WHISPERS WITH SNOWY PEAKS AND BLOOMING VALLEYS — WHERE EVERY BREEZE TELLS A STORY AND SILENCE SINGS IN SERENITY.</p>
+    </div>
+  </section>
+
+  <!-- Section 1: History -->
+  <section class="history">
+    <div class="text">
+      <h1>History</h1>
+      <p>
+        LACHUNG, A SCENIC MOUNTAIN VILLAGE IN NORTH SIKKIM, WAS ONCE A VITAL TRADE ROUTE BETWEEN SIKKIM AND TIBET. DUE TO ITS STRATEGIC LOCATION NEAR THE INDO-CHINA BORDER, IT REMAINED CLOSED TO FOREIGNERS UNTIL 1999. THE VILLAGE IS RENOWNED FOR THE LACHUNG MONASTERY, BUILT IN 1880, AND IS DEEPLY ROOTED IN BUDDHIST TRADITIONS. TODAY, LACHUNG IS CELEBRATED FOR ITS BREATHTAKING LANDSCAPES, RIVER VALLEYS, WATERFALLS, AND BLOOMING RHODODENDRON FORESTS.
+      </p>
+    </div>
+    <div class="image">
+      <img src="https://i.pinimg.com/736x/35/28/85/35288577e3829f1a24c462458af3d1df.jpg" alt="lachung image">
+    </div>
+  </section>
+
+  <!-- Section 2: Highlight Cards -->
+  <section class="highlights">
+    <div class="highlight-card">
+      <img src="https://i.pinimg.com/736x/83/7b/a8/837ba82a96a7d482a51ef5a0d281650e.jpg" alt="yumthang valley">
+      <p>YUMTHANG VALLEY</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://i.pinimg.com/736x/02/26/8a/02268a152460167d8721506ab05788bb.jpg" alt="zero point">
+      <p>YUME SAMDONG (ZERO POINT)</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/59/97/3e/photo0jpg.jpg?w=900&h=500&s=1" alt="bhewma falls">
+      <p>BHEWMA FALLS</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://media1.thrillophilia.com/filestore/z347ve9osnv0zza40pa5mosx7jb8_1538563430_shutterstock_139477499.jpg?w=400&dpr=2" alt="lachung monastery">
+      <p>LACHUNG MONASTERY</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://www.esikkimtourism.in/wp-content/uploads/2019/04/lakes.jpg" alt="gurudongmar lake">
+      <p>GURUDONGMAR LAKE</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://www.esikkimtourism.in/wp-content/uploads/2019/04/trkkngmrch.jpg" alt="green lake trek">
+      <p>GREEN LAKE TREK</p>
+    </div>
+  </section>
+
+  
+
+  <!-- Section 3 : Itinerary -->
+  <section class="itinerary">
+    <img src="https://i.pinimg.com/736x/07/c6/01/07c601bf06c73bf7ad5979e9eae950d8.jpg" alt="Itinerary Image">
+    <div class="itinerary-content">
+      <h1>Itinerary</h1>
+      <p>📅 BEST TIME TO VISIT<br>
+        April to June – Blooming rhododendrons and clear skies
+        October to March – Snow-kissed landscapes and winter serenity
+        Avoid peak monsoons (July–August) due to landslides.</p>
+
+      <p>🚉 HOW TO GET THERE<br>
+      Nearest Airport: Bagdogra (200 km)<br>
+      By Train: New Jalpaiguri (NJP) is the nearest major railhead<br>
+      By Road: Shared jeeps and taxis from Gangtok (approx. 6–7 hrs)<br>
+      Permits: Inner Line Permit (ILP) required for Indian nationals; Protected Area Permit for foreigners – available in Gangtok</p>
+
+      <p>🏨 WHERE TO STAY<br>
+      Budget:Lachung Deezong, Delight Royal Lachung<br>
+      Mid-Range: The Apple Orchard Resort, Hill Queen Residency<br>
+      Scenic stays: Etho Metho Cottages (with monastery views), Himalayan Eco Retreats</p>
+
+      <p>🍛 LOCAL FLAVORS & CAFÉS<br>
+        Tibetan Kitchen: Try hot thukpa, tingmo, and momos<br>
+        Village Cafés: Small tea stalls near waterfalls & viewpoints<br>
+        Monastery Offerings: Butter tea and local snacks during festivals<br>
+        Snowpoint Dhaba (near Zero Point): Maggi, parathas, and more — with a view! <br>
+       </p>
+    </div>
+  </section>
+  <style>
+
+    /* Common animation classes */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Hover zoom effect */
+    img:hover, .hampi-image:hover {
+      transform: scale(1.03);
+      transition: transform 0.4s ease;
+    }
+
+  .testimonials {
+    background-color: #f8cdf3;
+    padding: 80px 5%;
+    text-align: center;
+  }
+
+  .testimonials h2 {
+    font-size: 48px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    margin-bottom: 60px;
+    color: #f0abe9;
+  }
+
+  .testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .testimonial-card {
+    background-color: rgb(250, 177, 244);
+    border: 1px solid #cf75d6;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+  }
+
+  .testimonial-card p {
+    font-size: 16px;
+    padding: 20px;
+    line-height: 1.5;
+    color: #f4a3ef;
+    font-family: 'Georgia', serif;
+  }
+
+  @media (max-width: 900px) {
+    .testimonial-card {
+      width: 100%;
+    }
+  }
+  
+    .testimonials {
+      background-color: #f8d3f4;
+      padding: 80px 5%;
+      text-align: center;
+    }
+  
+    .testimonials h2 {
+      font-size: 48px;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 300;
+      margin-bottom: 60px;
+      color: #1e021b;
+    }
+  
+    .testimonial-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  
+    .testimonial-card {
+      background-color: rgb(254, 233, 253);
+      border: 1px solid #6c0265;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .testimonial-card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+    }
+  
+    .testimonial-card p {
+      font-size: 16px;
+      padding: 20px;
+      line-height: 1.5;
+      color: #1a0c75;
+      font-family: 'Georgia', serif;
+    }
+  
+    @media (max-width: 900px) {
+      .testimonial-card {
+        width: 100%;
+      }
+    }
+  
+</style>
+
+</body>
+</html>
+
+<!-- Section 5: Testimonials -->
+<section class="testimonials">
+    <h2>What Our Travelers Say </h2>
+    <div class="testimonial-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/cc/63/52/cc6352dd3cf9263aa5cc5c1fa6593017.jpg" alt="Traveler 1">
+        <p>"Walking through Lachung felt like stepping into a Himalayan dream — where cascading waterfalls hum lullabies and each pine-scented breeze carries whispers of timeless legends."<br>— Ananya, India</p>
+      </div>
+  
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/60/c8/e1/60c8e18e4b04814b97634cf9a8128a9d.jpg" alt="Traveler 2">
+        <p>"Sunrise over Lachung’s snowy ridges was pure magic. I sat beside the Yumthang River sketching frost-kissed trees while the first light painted the peaks in gold — a stillness that speaks volumes."<br>— Luca, Italy</p>
+      </div>
+  
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/e3/14/96/e31496de96113e7b35e38ce3c2da86a6.jpg" alt="Traveler 3">
+        <p>"Our guide brought the valley to life — from stories of yaks crossing frozen passes to hidden monasteries echoing with chants. I came for the mountains, but I stayed for the soul of Lachung."<br>— Maya, USA</p>
+      </div>
+    </div>
+  </section>
+  
+  <style>
