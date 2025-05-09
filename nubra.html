@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nubra Valley Explorer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #ceddf7;
+      color: #043866;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+
+    section {
+      width: 100%;
+      padding: 80px 5%;
+    }
+    /* Section 1 - nubra-valley Landing */
+    .nubra-valley-section {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+      }
+  
+      .nubra-valley-image {
+        flex: 1;
+        background: url('https://i.pinimg.com/736x/f9/5a/b4/f95ab49bf3388375f65f1eea6c171131.jpg') center center/cover no-repeat;
+      }
+  
+      .nubra-valley-text {
+        flex: 1;
+        background-color: #cadaef;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px;
+        flex-direction: column;
+        text-align: left;
+      }
+  
+      .nubra-valley-text h1 {
+        font-family: 'DM Serif Display', serif;
+        font-size: 100px;
+        color: #090263;
+        margin-bottom: 20px;
+      }
+  
+      .nubra-valley-text p {
+        font-size: 12px;
+        color: #1b0252;
+        font-weight: 500;
+        max-width: 300px;
+        line-height: 1.6;
+      }
+
+    /* Section 1: History */
+    .history {
+      background-color: #d7e7f7;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .history .text {
+      flex: 1 1 55%;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-right: 40px;
+    }
+
+    .history h1 {
+      font-size: 100px;
+      color: #190c65;
+      margin-bottom: 20px;
+    }
+
+    .history .image {
+      flex: 1 1 40%;
+    }
+
+    .history img {
+      width: 100%;
+      border-radius: 100px 100px 0 0;
+    }
+
+    /* Section 2: Scrollable Highlight Cards */
+    .highlights {
+      background-color: #d1e7fb;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .highlight-card {
+      width: calc(33% - 20px);
+      background-color: #abc1f0;
+      text-align: center;
+    }
+
+    .highlight-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .highlight-card p {
+      color: #08118e;
+      font-size: 22px;
+      letter-spacing: 3px;
+      margin-top: 12px;
+    }
+
+
+     
+    /* Section 3: Itinerary */
+    .itinerary {
+      background-color: #d3e9f6;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      color: rgb(11, 3, 62);
+    }
+
+    .itinerary img {
+      width: 40%;
+      border-radius: 10px;
+      margin-right: 5%;
+    }
+
+    .itinerary-content {
+      flex: 1;
+    }
+
+    .itinerary h1 {
+      font-size: 70px;
+      margin-bottom: 30px;
+    }
+
+    .itinerary-content p {
+      margin-bottom: 20px;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 1024px) {
+      .highlight-card, .place-item {
+        width: calc(50% - 20px);
+      }
+
+      .itinerary {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .itinerary img {
+        width: 80%;
+        margin: 0 auto 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .highlight-card, .place-item {
+        width: 100%;
+      }
+
+      .history {
+        flex-direction: column;
+      }
+
+      .history .text, .history .image {
+        flex: 1 1 100%;
+        padding: 0;
+      }
+
+      .history h1 {
+        font-size: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+     <!-- Section 1: Landing -->
+  <section class="nubra-valley-section">
+    <div class="nubra-valley-image"></div>
+    <div class="nubra-valley-text">
+      <h1>Nubra Valley</h1>
+      <p>IN THE CRADLE OF LADAKH, NUBRA WHISPERS WITH DUNES AND GLACIERS — WHERE SILENCE SPEAKS LOUDER THAN WORDS.</p>
+    </div>
+  </section>
+
+  <!-- Section 1: History -->
+  <section class="history">
+    <div class="text">
+      <h1>History</h1>
+      <p>
+        NUBRA VALLEY, LOCATED IN THE UNION TERRITORY OF LADAKH, WAS HISTORICALLY A PART OF THE ANCIENT SILK ROUTE, CONNECTING TRADE BETWEEN INDIA, CHINA, AND CENTRAL ASIA. IT HAS BEEN INHABITED BY BUDDHIST MONASTERIES AND WAS ONCE A FLOURISHING CENTER FOR COMMERCE. THE VALLEY’S STRATEGIC IMPORTANCE CONTINUES TODAY DUE TO ITS PROXIMITY TO THE SIACHEN GLACIER AND THE INDIA-CHINA BORDER.
+      </p>
+    </div>
+    <div class="image">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/b9/e6/1c/nubra-valley.jpg?w=1200&h=-1&s=1" alt="nubra valley image">
+    </div>
+  </section>
+
+  <!-- Section 2: Highlight Cards -->
+  <section class="highlights">
+    <div class="highlight-card">
+      <img src="https://i.pinimg.com/736x/61/22/ae/6122aee902031b952866b2838e154bcd.jpg" alt="diskit monastery">
+      <p>DISKIT MONASTERY</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCciO8bbW4-Bq-hzwgwV1vqxlNLClCgSnWdCfqz1hMj5zFqGboBS-oUIlejlEyGWwynPaDRsaipY3qqGnIuJFggBRwQN-FL_f8_3ZMcxhRPGlErhf-7LttyNbQHMVZ7latvIix741Ngig/s1600/Nubra+Dunes+02.jpg" alt="sand dunes">
+      <p>HUNDER SAND DUNES</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://ychef.files.bbci.co.uk/1280x720/p04fm95p.jpg" alt="turtuk">
+      <p>TURTUK- NORTHERNMOST VILLAGE OF INDIA</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://vajiram-prod.s3.ap-south-1.amazonaws.com/Key_Facts_about_Shyok_River_8673064e29.webp" alt="shyok river">
+      <p>SHYOK RIVER</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://www.lchangnang.com/blog/wp-content/uploads/2023/02/Yarab-Tso-Lake-1.jpg" alt="yarab tso lake">
+      <p>YARAB TSO LAKE</p>
+    </div>
+    <div class="highlight-card">
+      <img src="https://www.tourmyindia.com/states/ladakh/imagess/panamik1.jpg" alt="panamik hot spring">
+      <p>PANAMIK VILLAGE - HOT SPRING</p>
+    </div>
+  </section>
+
+  
+
+  <!-- Section 3 : Itinerary -->
+  <section class="itinerary">
+    <img src="https://i.pinimg.com/736x/b9/23/c3/b923c34bcaf54eea8c8119af2ffd9aa8.jpg" alt="Itinerary Image">
+    <div class="itinerary-content">
+      <h1>Itinerary</h1>
+      <p>📅 BEST TIME TO VISIT<br>
+        May to September – Pleasant summer temperatures, clear skies, and accessible mountain passes. Avoid winters unless you're a snow-seeker.</p>
+
+      <p>🚉 HOW TO GET THERE<br>
+      Nearest Airport: Kushok Bakula Rimpochee Airport, Leh (120 km from Hunder)<br>
+      By Road: Drive from Leh via Khardung La Pass (World’s highest motorable road) – a scenic 5–6 hour journey<br>
+      Permits: Inner Line Permit (ILP) is required for all visitors — available online or at Leh DC office</p>
+
+      <p>🏨 WHERE TO STAY<br>
+      Budget: Hunder Sarai Camp, Sand Dunes Guesthouse<br>
+      Mid-Range: The Wooden Nest, Nubra Boutique Camp<br>
+      Literary Retreats: Traditional homestays in Turtuk village with views of Baltistan culture</p>
+
+      <p>🍛 LOCAL FLAVORS & CAFÉS<br>
+        The Dunes Café (Hunder): Cozy Tibetan and Ladakhi dishes<br>
+        Your Cafe (Diskit): Great chai, thukpa & conversations<br>
+        Baltistan Kitchen (Turtuk): Authentic, home-cooked apricot-based cuisine<br>
+        Yarab View Tea Stall (near Yarab Tso): Chai with a view</p>
+    </div>
+  </section>
+  <style>
+  .testimonials {
+    background-color: #FAF6F1;
+    padding: 80px 5%;
+    text-align: center;
+  }
+
+  .testimonials h2 {
+    font-size: 48px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    margin-bottom: 60px;
+    color: #333;
+  }
+
+  .testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .testimonial-card {
+    background-color: rgb(175, 206, 240);
+    border: 1px solid #333;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+  }
+
+  .testimonial-card p {
+    font-size: 16px;
+    padding: 20px;
+    line-height: 1.5;
+    color: #333;
+    font-family: 'Georgia', serif;
+  }
+
+  @media (max-width: 900px) {
+    .testimonial-card {
+      width: 100%;
+    }
+  }
+  
+    .testimonials {
+      background-color: #d3e4f8;
+      padding: 80px 5%;
+      text-align: center;
+    }
+  
+    .testimonials h2 {
+      font-size: 48px;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 300;
+      margin-bottom: 60px;
+      color: #333;
+    }
+  
+    .testimonial-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  
+    .testimonial-card {
+      background-color: rgb(188, 213, 244);
+      border: 1px solid #06000d;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .testimonial-card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+    }
+  
+    .testimonial-card p {
+      font-size: 16px;
+      padding: 20px;
+      line-height: 1.5;
+      color: #1a0c75;
+      font-family: 'Georgia', serif;
+    }
+  
+    @media (max-width: 900px) {
+      .testimonial-card {
+        width: 100%;
+      }
+    }
+  
+</style>
+
+</body>
+</html>
+
+<!-- Section 5: Testimonials -->
+<section class="testimonials">
+    <h2>What Our Travelers Say </h2>
+    <div class="testimonial-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/cc/63/52/cc6352dd3cf9263aa5cc5c1fa6593017.jpg" alt="Traveler 1">
+        <p>"Walking through Nubra Valley felt like touching the edge of heaven — where golden dunes meet glaciers, and every whispering wind carries the poetry of the Himalayas."<br>— Ananya, India</p>
+      </div>
+  
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/60/c8/e1/60c8e18e4b04814b97634cf9a8128a9d.jpg" alt="Traveler 2">
+        <p>"Sunrise over the Nubra dunes was surreal. I watched the light dance on the sand while sketching the snow-capped peaks in the distance—where desert, mountains, and silence meet in perfect harmony."<br>— Luca, Italy</p>
+      </div>
+  
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <img src="https://i.pinimg.com/736x/e3/14/96/e31496de96113e7b35e38ce3c2da86a6.jpg" alt="Traveler 3">
+        <p>"Our local guide painted pictures with his words—stories of Silk Road traders, ancient gompas, and whispered prayers in the wind. I came for the landscapes, but I stayed for the legends."<br>— Maya, USA</p>
+      </div>
+    </div>
+  </section>
+  
+  <style>
